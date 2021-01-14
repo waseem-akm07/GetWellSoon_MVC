@@ -1,0 +1,100 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head runat="server">
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="initial-scale=1, maximum-scale=1">
+<meta name="viewport" content="minimum-scale=1.0; maximum-scale=1.0; user-scalable=false; initial-scale=1.0;"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=1, minimum-scale=1.0, maximum-scale=1.0">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+<title>GetWellSoon</title>
+
+<!-- Bootstrap -->
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<link href="css/style.css" rel="stylesheet">
+<!--<link href="css/carousel.css" rel="stylesheet">-->
+<link href="css/responsive.css" rel="stylesheet">
+
+<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+    <form id="form1" runat="server">
+<div class="header">
+  <div class="top-bar">
+    <div class="container both-padd">
+      <div class="row">
+        <div class="col-md-4 col-sm-12 col-xs-12"><a href="index.html" class="logo"><img src="images/logo.png" alt="logo here" title="SignaSafe"></a></div>
+        <div class="col-md-8 col-sm-12 col-xs-12">
+          <div class="top-nav pull-right">
+            <p class="phone-num"><span><i class="fa fa-phone"></i></span>800-2345-6789</p>
+            <div class="text-content">
+              <p>One of our representatives will happily contact you within 24 hours. For urgent needs call us at</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<nav class="navbar navbar-default main-nav">
+  <div class="container both-padd">
+    <div class="navbar-header">
+      <button aria-controls="navbar" aria-expanded="false" data-target="#navbar" data-toggle="collapse" class="navbar-toggle collapsed" type="button"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+      <!--  <a href="#" class="navbar-brand">Project name</a>--> 
+    </div>
+    <div class="navbar-collapse collapse both-padd" id="navbar" aria-expanded="false" style="height: 1px;">
+      <ul class="nav navbar-nav">
+        <li title="Home"  class="active"><a href="index.aspx">Home</a></li>
+        <li><a href="frmsrc.aspx" title="services">Search</a></li>
+     
+        <li>
+    <asp:HyperLink ID="lk2" NavigateUrl="~/frmreg.aspx" runat="server" text="SignUp"/>
+        </li>
+          <li>
+    <asp:LinkButton ID="lk3" runat="server" Text="Write Review" OnClick="lk3_Click" />
+          </li>
+             <li>
+            <asp:LinkButton ID="LinkButton1" runat="server" OnClick="LinkButton1_Click"></asp:LinkButton>
+        </li>
+      </ul>
+    </div>
+    <!--/.nav-collapse --> 
+  </div>
+</nav>
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server"></asp:ContentPlaceHolder>
+
+<div class="container both-padd">
+    <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server"></asp:ContentPlaceHolder>
+</div>
+
+<footer>
+ 
+  <div class="footer-bottom">
+    <div class="container">
+      <div class="copy-right">
+        <p>Copyright © 2015-2016 Getwellsoon, Inc. All Rights Reserved</p>
+      </div>
+      
+    </div>
+    </div>
+
+</footer>
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) --> 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script> 
+<!-- Include all compiled plugins (below), or include individual files as needed --> 
+<script src="js/bootstrap.min.js"></script>
+        </form>
+</body>
+</html>
+
